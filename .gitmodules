@@ -1,3 +1,6 @@
 [submodule "interactivos2016"]
 	path = interactivos2016
 	url = https://github.com/associacaosilo/interactivos2016.git
+[submodule "interactivos2018"]
+	path = interactivos2018
+	url = https://github.com/associacaosilo/interactivos2018.git
