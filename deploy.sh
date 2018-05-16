@@ -27,7 +27,7 @@ mv interactivos2016/_site/2016 .
 mv interactivos2018/_site/2018 .
 
 git rm --cached -r .
-git add CNAME index.html
+git add CNAME index.html js
 git add 2016
 git add 2018
 git commit -m "updates sites"
