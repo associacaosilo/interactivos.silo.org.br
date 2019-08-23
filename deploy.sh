@@ -31,7 +31,7 @@ git checkout -- .
 mv interactivos2016/_site/2016 .
 mv interactivos2018/_site/2018 .
 mv interactivos2019/_site/2019 .
-rm -rf interactivos2016 interactivos2018 interactivos209
+rm -f interactivos2016 interactivos2018 interactivos2019
 git checkout --orphan gh-pages
 
 git rm --cached -r .
