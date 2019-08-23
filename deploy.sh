@@ -28,10 +28,11 @@ git push origin master
 git checkout -- .
 
 ## create new branch and push
-git checkout --orphan gh-pages
 mv interactivos2016/_site/2016 .
 mv interactivos2018/_site/2018 .
 mv interactivos2019/_site/2019 .
+rm -rf interactivos2016 interactivos2018 interactivos209
+git checkout --orphan gh-pages
 
 git rm --cached -r .
 git add CNAME index.html js
