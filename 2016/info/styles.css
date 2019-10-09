@@ -1,0 +1,618 @@
+/*
+Standard Colors
+
+*/
+
+
+
+  .page-content {
+    color: #000;
+  }
+
+
+  header .mdl-navigation {
+    text-transform: uppercase;
+  }
+
+  .card-container .mdl-card__supporting-text {
+    height: auto;
+    color: black;
+    padding-bottom: 20px !important;
+  }
+
+  .about {
+
+  }
+
+  #apply {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    z-index: 900;
+  }
+
+  .android-wear-band {
+      width: 100%;
+      text-align: center;
+      background-color: rgb(20,40,130);
+  }
+
+  .android-wear-band-text {
+      max-width: 800px;
+      margin-left: 25%;
+      padding: 24px;
+      text-align: left;
+      color: white;
+  }
+
+.android-alt-link {
+  text-decoration: none;
+  color: #64ffda !important;
+  font-size: 16px;
+}
+
+.android-alt-link .material-icons {
+    position: relative;
+    top: 6px;
+}
+
+  span.mobile-title.mdl-layout-title a, .drawer span.mdl-layout-title a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+
+
+  .works_list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; 
+    }
+
+
+ @media (min-width: 70em) {
+       .works_list {
+        -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+                    -ms-grid-row-align: flex-start;
+                align-items: flex-start;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row; } }
+
+
+
+    .works_list li {
+      padding: 0; 
+    }
+    @media (min-width: 70em) {
+        .works_list li {
+          padding: 0 0.5em; 
+        } 
+    }
+    .works_list h3 {
+      color: #2e3d49;
+      font-size: 1.125em;
+      font-weight: 600;
+      line-height: 1.5em; 
+    }
+    .works_list p {
+      color: #757c81;
+      font-size: 0.875em;
+      font-weight: 400;
+      line-height: 1.5em;
+      display: none; 
+    }
+      @media (min-width: 70em) {
+        .works_list p {
+          display: block; 
+        } 
+     }  .works_list img {
+        padding-bottom: 1em; 
+    }
+    @media (min-width: 70em) {
+        .works_list img {
+          padding-bottom: 1.6em; }
+      }
+  .ndhub_list {
+      position: relative; }
+      .ndhub_list .outer-contain {
+        background-color: #f4f4ef; }
+      .ndhub_list .contain {
+        padding: 5em 1.5em;
+        text-align: center; }
+        .ndhub_list .contain h2 {
+          font-size: 2.125em;
+          color: #2e3d49;
+          font-weight: 300;
+          margin-bottom: 30px; }
+        .ndhub_list .contain p {
+          font-size: 1.125em;
+          color: #757c81; }
+          .ndhub_list .contain p strong {
+            font-weight: 600; }
+      .ndhub_list .cards_contain {
+        padding: 3em 0; }
+      @media (min-width: 35em) {
+        .ndhub_list .contain h2 {
+          font-size: 2.5em; } }
+      @media (min-width: 44em) {
+        .ndhub_list .outer_contain {
+          padding-bottom: 7.5em; } }
+
+
+
+
+
+
+body {
+  margin: 0;
+}
+
+
+
+.mdl-layout__header {
+  background-color: transparent;
+  margin-bottom: -100px;
+  transition-duration: 0.1s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-property: background;
+
+}
+
+.mdl-layout__header.is-compact, .is-small-screen .mdl-layout__header {
+  background-color: rgb(20,40,130);
+}
+
+
+
+
+/* Disable ugly boxes around images in IE10 */
+a img{
+  border: 0px;
+}
+
+::-moz-selection {
+  background-color: #313d48;
+  color: #fff;
+}
+
+::selection {
+  background-color: #313d48 ;
+  color: #fff;
+}
+
+.android-search-box .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.header .mdl-menu__container {
+  z-index: 50;
+  margin: 0 !important;
+}
+
+
+.mdl-textfield--expandable {
+  width: auto;
+}
+
+.mobile-title {
+  display: none !important;
+}
+
+
+.logo-image {
+  height: 28px;
+  width: 140px;
+}
+
+
+.header {
+  overflow: visible;
+  background-color: #ededed;
+}
+
+
+  .header .material-icons {
+    color: #767777 !important;
+  }
+
+  .header .mdl-layout__drawer-button {
+    background: transparent;
+    color: #767777;
+  }
+
+  .header .mdl-navigation__link {
+    color: #757575;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 800px;
+  }
+
+  .android-search-box.is-focused + .navigation-container {
+    opacity: 0;
+    width: 100px;
+  }
+
+
+  .navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+  }
+
+    .navigation .mdl-navigation__link:hover {
+      border-bottom: 4px solid #fff;
+    }
+
+
+  .android-search-box {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .android-more-button {
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+
+.drawer {
+  border-right: none;
+}
+
+  .drawer-separator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0;
+  }
+
+  .drawer .mdl-navigation__link.mdl-navigation__link {
+    font-size: 14px;
+    color: #757575;
+  }
+
+  .drawer span.mdl-navigation__link.mdl-navigation__link {
+    color: #2e3d49;
+  }
+
+  .drawer .mdl-layout-title {
+    position: relative;
+    background: rgb(20,40,130);
+    height: 160px;
+  }
+
+    .drawer .logo-image {
+      position: absolute;
+      bottom: 16px;
+    }
+
+
+
+
+.mini .welcome-section {
+  height: 400px;
+}
+
+.welcome-section {
+  position: relative;
+  height: 800px;
+  width: auto;
+  background-color: #f3f3f3;
+  background: url('images/jumbotron.jpg') center 30% no-repeat;
+  background-size: cover;
+}
+
+.nuvem-background {
+  background: url('images/nuvem.jpg') center 30% no-repeat;
+  background-size: cover;
+  margin-top: 80px;
+}
+.nuvem-section {
+}
+
+.nuvem-section {
+  padding: 0 0 40px;
+  max-width: 1044px;
+  margin-top: -80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.logo-font {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1;
+  color: #fff;
+  font-weight: 500;
+}
+
+.slogan {
+  font-size: 60px;
+  padding-top: 260px;
+}
+
+.sub-slogan {
+  font-size: 21px;
+  padding-top: 24px;
+}
+
+
+
+
+.image-link {
+  text-decoration: none;
+}
+
+.current {
+  display: inline-block;
+  width: 160px;
+  margin-right: 32px;
+}
+
+  .current .android-screen-image {
+    width: 40%;
+    z-index: 1;
+  }
+
+
+
+
+
+.current-section {
+  position: relative;
+}
+
+.current-section .current-band {
+  min-height: 450px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+
+  background: linear-gradient(transparent, rgba(0,0,0,1));
+  background-color: transparent;
+}
+
+.mini .current-band {
+}
+
+.mini .fab {
+  position: absolute;
+  right: 20%;
+  bottom: -26px;
+  z-index: 3;
+  background: rgb(20,40,130) !important;
+  color: #fff !important;
+}
+
+.current-band-text {
+  max-width: 800px;
+  margin-left: 25%;
+  padding: 24px;
+  text-align: left;
+  color: white;
+  bottom: 0;
+  position: absolute;
+}
+
+  .current-band-text p {
+    padding-top: 8px;
+  }
+
+.link {
+  text-decoration: none;
+  color: rgb(20,40,130);
+}
+
+  .link:hover {
+    color: rgb(20,40,130);
+  }
+
+
+  .link .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+  }
+
+  .alt-link {
+    text-decoration: none;
+    /*color: rgb(20,40,130) !important;*/
+    font-size: 16px;
+  }
+
+  .alt-link:hover {
+    /*color: rgb(20,40,130) !important;*/
+  }
+
+  .alt-link .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+.howitworks-section, .recent-challenges-section, .challenge-detail-section, .description-section, .about-section {
+  padding: 40px 0 40px;
+  max-width: 1044px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+  .challenge-detail-section .section-title, .recent-challenges-section .section-title, .description-section .section-title {
+    margin-left: 12px;
+    padding-bottom: 24px;
+  }
+
+.card-container {
+}
+
+  .card-container .mdl-card__media {
+    overflow: hidden;
+    background: transparent;
+  }
+
+    .card-container .mdl-card__media img {
+      width: 100%;
+    }
+
+  .card-container .mdl-card__title {
+    background: transparent;
+    height: auto;
+  }
+
+  .card-container .mdl-card__title-text {
+    color: black;
+    height: auto;
+  }
+
+  .card-container .mdl-card__supporting-text {
+    height: auto;
+    color: black;
+    padding-bottom: 56px;
+  }
+
+  .card-container .mdl-card__actions {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .card-container .mdl-card__actions a {
+    border-top: none;
+    font-size: 16px;
+  }
+
+.footer {
+  background-color: rgb(20,40,130);
+  position: relative;
+  color: #fff;
+}
+
+
+.footer .link {
+  color: #fff;
+}
+
+  .footer a:hover {
+    color: #ededed;
+  }
+
+  .footer .mdl-mega-footer--top-section::after {
+    border-bottom: none;
+  }
+
+  .footer .mdl-mega-footer--middle-section::after {
+    border-bottom: none;
+  }
+
+  .footer .mdl-mega-footer--bottom-section {
+    position: relative;
+  }
+
+  .footer .mdl-mega-footer--bottom-section a {
+    margin-right: 2em;
+  }
+
+  .footer .mdl-mega-footer--right-section a .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+
+.link-menu:hover {
+  cursor: pointer;
+}
+
+
+/**** Mobile layout ****/
+@media (max-width: 900px) {
+  .navigation-container {
+    display: none;
+  }
+
+  .title {
+    display: none !important;
+  }
+
+  .mobile-title {
+    display: block !important;
+    position: absolute;
+    left: calc(50% - 70px);
+    top: 12px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+     consecutive "+" operators in some cases. Therefore, we need to use both
+     here to cover all the bases. */
+
+
+  .welcome-section {
+    height: 350px;
+  }
+
+  .slogan {
+    font-size: 26px;
+    margin: 0 16px;
+    padding-top: 24px;
+  }
+
+  .sub-slogan {
+    font-size: 16px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
+
+  .current-band-text {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .footer .mdl-mega-footer--bottom-section {
+    display: none;
+  }
+}
+

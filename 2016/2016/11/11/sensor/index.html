@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sensor</title>
+  <meta name="description" content="Montamos um mini servidor de sensores para estudar as flutuações de temperatura da composteira e do condensador.">
+	
+  <link rel="canonical" href="https://interactivos.silo.org.br/2016/2016/11/11/sensor/">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/2016/favicon.ico" >
+
+  <link rel="stylesheet" type="text/css" href="/2016/static/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/2016/static/css/index.css">
+
+  <script type="text/javascript" src="/2016/static/js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="/2016/static/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="/2016/static/js/index.js"></script>
+</head>
+
+  <body>
+    <header class="fixed-header">
+
+<!-- navbar -->
+  <nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/2016/">Interactivos?'16</a>
+      <p class="navbar-text"></p>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+
+        
+          <li>
+        
+        <!---
+        <a href="/2016/">Home</a></li>
+        --->
+
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+</header>
+    <div id="main" class="container main">
+      <div class="row">
+
+  <div id="myArticle" class="col-sm-9">
+    <div class="post-area post">
+      <header>
+        
+        <p>
+          <a href="/2016/">Interactivos?'16</a> ▶ <a href="/2016/del">del</a>
+        </p>
+        
+        
+        
+        <h1>Sensores de temperatura</h1>
+        
+      </header>
+      <hr>
+      <article>
+        <p>Montamos um mini servidor de sensores para estudar as flutuações de temperatura da composteira e do condensador.</p>
+
+<p><img src="//c2.staticflickr.com/6/5683/30994911896_c5c88eeedf_b.jpg" alt="Termômetro" /></p>
+
+<p>Esse sistema é composto por um Raspberry Pi, um sensor de temperatura <a href="https://www.sparkfun.com/products/13683">SHT15</a>, e um sensor de temperatura <a href="http://www.breakmyboard.com/product/humidity-temperature-sensor-breakout-sht21/">SHT21</a>.</p>
+
+<p>Gostaríamos de ter usado a mesma versão do sensor nos dois locais, mas não é possível mudar o endereço I<sup>2</sup>C dos sensores SHT21 para poder colocá-los no mesmo bus, então usamos versões diferentes para evitar esse conflito. O SHT15 não usa o protocolo I<sup>2</sup>C, mas algo “tipo I<sup>2</sup>C”, então dá para usar qualquer pino do Raspberry Pi para fazer essa comunicação.</p>
+
+<p><img src="//c2.staticflickr.com/6/5558/30728713440_5bf0a27b3a_b.jpg" alt="Sensor SHT21 e conexão" /></p>
+
+<p>Usamos duas bibliotecas de Python <a href="https://github.com/jaques/sht21_python"><sup>[1]</sup></a>  <a href="https://pypi.python.org/pypi/rpiSht1x/1.2"><sup>[2]</sup></a> em um script simples, para fazer a comunicação com os sensores e gravar um arquivo CSV com os valores de temperatura e humidade. Esses valores podem ser visualizados usando qualquer programa de planilha, mas também criamos um pequeno servidor de html/js para automatizar esse passo. O código está no <a href="https://github.com/Interactivos16/DEL-Sensor-Server">github</a>.</p>
+
+<p><img src="//c2.staticflickr.com/6/5497/31030662985_e7a780edf7_b.jpg" alt="Gráfico Excel" />
+<img src="//c2.staticflickr.com/6/5773/30928153961_a3401a2137_b.jpg" alt="Gráfico d3.js" /></p>
+
+      </article>
+      <hr>
+      
+      <p>
+        <a href="/">Interactivos?'16</a> ▶ <a href="/del">del</a> ▶ <a href=" /2016/11/11/sensor/#main">Sensores de temperatura</a>
+      </p>
+      
+    </div>
+  </div>
+</div>
+    </div>
+
+    <div id="top" data-toggle="tooltip" data-placement="left" title="back to top">
+      <a href="javascript:;">
+        <div class="arrow"></div>
+        <div class="stick"></div>
+      </a>
+    </div>
+
+    <footer class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>
