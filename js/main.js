@@ -1,1 +1,1 @@
-window.location.replace("./2019/");
+window.location.replace("./2016/");
