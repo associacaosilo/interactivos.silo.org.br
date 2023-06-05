@@ -1,0 +1,52 @@
+name: deploy gh-pages
+
+on:
+  repository_dispatch:
+    types:
+      - build-site
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Checkout 2016
+        uses: actions/checkout@v3
+        with:
+          repository: 'associacaosilo/interactivos2016'
+          ref: 'gh-pages'
+          path: '2016'
+
+      - name: Checkout 2018
+        uses: actions/checkout@v3
+        with:
+          repository: 'associacaosilo/interactivos2018'
+          ref: 'gh-pages'
+          path: '2018'
+
+      - name: Checkout 2019
+        uses: actions/checkout@v3
+        with:
+          repository: 'associacaosilo/interactivos2019'
+          ref: 'gh-pages'
+          path: '2019'
+
+      - name: Build
+        run: |
+          mkdir public
+          cp -r CNAME index.html js ./public/
+          cp -r 2016 2018 2019 ./public/
+          find ./public -name .git | xargs rm -rf
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
