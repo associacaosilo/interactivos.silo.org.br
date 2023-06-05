@@ -258,7 +258,7 @@
 <h2 id="device">Device</h2>
 <p>The first version of the prototype includes:</p>
 <ul>
-  <li>A Raspberry Pi 3 Model B v1.2 (Standar user: <code class="highlighter-rouge">pi</code>, standard password for the project: <code class="highlighter-rouge">ecos</code> - otherwise look for the standard password for the raspberry). This will be named as RPI, Raspi, etc.</li>
+  <li>A Raspberry Pi 3 Model B v1.2 (Standar user: <code class="language-plaintext highlighter-rouge">pi</code>, standard password for the project: <code class="language-plaintext highlighter-rouge">ecos</code> - otherwise look for the standard password for the raspberry). This will be named as RPI, Raspi, etc.</li>
   <li>OS Raspbian 9</li>
   <li>NOIR Camera, that will take pictures when there is an animal that pass in front of the camera.</li>
   <li>Ultrasound sensor to measure distances, that will trigger the camera.</li>
@@ -268,14 +268,14 @@
 <h2 id="scheme-of-use">Scheme of use</h2>
 <ol>
   <li>Access the device with ethernet/wifi, via ssh, or by connecting a HDMI screen, keyboard and mouse.</li>
-  <li>Edit <code class="highlighter-rouge">configEcos.ini</code> file in the <code class="highlighter-rouge">/home/pi/scriptsEcos/</code> directory to set up some parameters of the device (fixed IP, energy consumption).</li>
-  <li>Edit crontab by: <code class="highlighter-rouge">crontab -e</code>, and add one line to do the recording with the specific schedule.</li>
+  <li>Edit <code class="language-plaintext highlighter-rouge">configEcos.ini</code> file in the <code class="language-plaintext highlighter-rouge">/home/pi/scriptsEcos/</code> directory to set up some parameters of the device (fixed IP, energy consumption).</li>
+  <li>Edit crontab by: <code class="language-plaintext highlighter-rouge">crontab -e</code>, and add one line to do the recording with the specific schedule.</li>
   <li>Switch off the device (if it is still with AC adaptor).</li>
   <li>Connect the power bank to feed the device and place it where sounds want to be recorded.</li>
 </ol>
 
 <h2 id="1-access-the-device">1. Access the device</h2>
-<p>There are two ways to access the device. In both ways, user will be <code class="highlighter-rouge">pi</code>. Standard password is <code class="highlighter-rouge">ecos</code>.</p>
+<p>There are two ways to access the device. In both ways, user will be <code class="language-plaintext highlighter-rouge">pi</code>. Standard password is <code class="language-plaintext highlighter-rouge">ecos</code>.</p>
 <ol>
   <li>Using ssh via ethernet or wifi. If you are using windows, you will need a ssh client, such as <a href="https://www.putty.org" target="_blank">Putty</a>.
     <ul>
@@ -284,7 +284,7 @@
       <li>It is important that your computer is connected to the same network.</li>
       <li>Steps in linux console:
         <ol>
-          <li><code class="highlighter-rouge">ssh username@IP</code> for example: <code class="highlighter-rouge">ssh pi@192.168.111.101</code>.</li>
+          <li><code class="language-plaintext highlighter-rouge">ssh username@IP</code> for example: <code class="language-plaintext highlighter-rouge">ssh pi@192.168.111.101</code>.</li>
           <li>Introduce the password of the raspberry.</li>
         </ol>
       </li>
@@ -299,13 +299,13 @@
 </ol>
 
 <h2 id="2-edit-configuration">2. Edit configuration</h2>
-<p>Modify the <code class="highlighter-rouge">configEcos.ini</code> file in the <code class="highlighter-rouge">/home/pi/scriptsEcos/</code> directory to include the following:</p>
+<p>Modify the <code class="language-plaintext highlighter-rouge">configEcos.ini</code> file in the <code class="language-plaintext highlighter-rouge">/home/pi/scriptsEcos/</code> directory to include the following:</p>
 <ol>
-  <li><code class="highlighter-rouge">id</code> The id of the device.</li>
-  <li><code class="highlighter-rouge">eth_ip</code> A fixed IP for ethernet. Useful (almost necessary) to access via SSH. If field is empty, RPI will work with DHCP (automatic IP).</li>
-  <li><code class="highlighter-rouge">wifi_ip</code> A fixed IP for wifi.  Also useful to access via SSH. If field is empty, RPI will work with DHCP (automatic IP).</li>
-  <li><code class="highlighter-rouge">ecos_recordings_folder_name</code> Sounds will be recorded in <code class="highlighter-rouge">/home/pi/Documents/Grabacoes</code>. If this variable is defined a new folder will be created in Grabacoes</li>
-  <li>GPS coordinates can be fixed via <code class="highlighter-rouge">gps_lon</code> and <code class="highlighter-rouge">gps_lat</code>. The idea is to locate the GPS coordinates with a phone or other gps device, and write here the coordinates. This will be place in every file recorded. Therefore every file can be located.</li>
+  <li><code class="language-plaintext highlighter-rouge">id</code> The id of the device.</li>
+  <li><code class="language-plaintext highlighter-rouge">eth_ip</code> A fixed IP for ethernet. Useful (almost necessary) to access via SSH. If field is empty, RPI will work with DHCP (automatic IP).</li>
+  <li><code class="language-plaintext highlighter-rouge">wifi_ip</code> A fixed IP for wifi.  Also useful to access via SSH. If field is empty, RPI will work with DHCP (automatic IP).</li>
+  <li><code class="language-plaintext highlighter-rouge">ecos_recordings_folder_name</code> Sounds will be recorded in <code class="language-plaintext highlighter-rouge">/home/pi/Documents/Grabacoes</code>. If this variable is defined a new folder will be created in Grabacoes</li>
+  <li>GPS coordinates can be fixed via <code class="language-plaintext highlighter-rouge">gps_lon</code> and <code class="language-plaintext highlighter-rouge">gps_lat</code>. The idea is to locate the GPS coordinates with a phone or other gps device, and write here the coordinates. This will be place in every file recorded. Therefore every file can be located.</li>
 </ol>
 
 <p>Besides in this file, different devices of the RPI can be turn off/on to save energy. If value=1, it will be on, if value=0 it will be off. It is important to be careful since turning off a device such as HDMI, can be problematic to connect the raspberry.</p>
@@ -318,14 +318,16 @@
 </ul>
 
 <h2 id="3-create-a-schedule-for-recording">3. Create a schedule for recording</h2>
-<p>To create a schedule for recording, once connected to the RPI, execute <code class="highlighter-rouge">crontab -e</code>. This will open a file in “nano” editor.</p>
+<p>To create a schedule for recording, once connected to the RPI, execute <code class="language-plaintext highlighter-rouge">crontab -e</code>. This will open a file in “nano” editor.</p>
 
 <p>Follow the examples at the end, and write a line in the same way but with the new schedule.</p>
 
-<p>Once written press <code class="highlighter-rouge">Ctrl+x</code> to close. It will ask you to save it. Press <code class="highlighter-rouge">S</code> and then when asks you about the name of the file just press intro to overwrite the previous one.</p>
+<p>Once written press <code class="language-plaintext highlighter-rouge">Ctrl+x</code> to close. It will ask you to save it. Press <code class="language-plaintext highlighter-rouge">S</code> and then when asks you about the name of the file just press intro to overwrite the previous one.</p>
 
         
           <div class="swipebox-gallery">
+  
+    
   
     
   
